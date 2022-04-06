@@ -1,0 +1,45 @@
+ion-grid, ion-row, ion-col {
+    margin: 0;
+    padding: 0;
+}
+
+ion-button.floatBtn {
+    top: 180px;
+    left: 180px;
+    width: 120px;
+    z-index: 1000;
+    position: absolute;
+}
+
+.containFood {
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.square {
+    margin: 1%;
+    display: flex;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.categoryCard {
+    width: 320px;
+    height: 240px;
+    border-radius: 12px;
+    z-index: -1000;
+    border: 1px solid #834CE0;    
+}
+
+.imgSize {
+    width: 100%;
+    height: auto;    
+    object-fit: contain;
+    position: relative;
+}
+
+.prefs {
+    color:#834CE0;
+}
