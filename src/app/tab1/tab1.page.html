@@ -1,9 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar mode="ios" color="light">
-    <ion-title>Calories</ion-title>&nbsp;
-    <ion-col size="6" class="rangeSize">
-      <ion-range mode="md" dualKnobs="true" min="25" max="400" step="25" value="80" snaps="true" [pin]="true"></ion-range>    
-    </ion-col>
+    <div class="containFood">
+      <ion-grid class="square">
+        <ion-row>
+          <ion-col>
+            <ion-item lines="none" class="rangeSize ion-text-center">
+              <div class="range-container">
+                <ion-label>Calories: <span class="prefs">{{currentValue}}</span></ion-label>
+                <ion-range mode="md" (ionChange)="setValue($event)" color="primary" dual-knobs="false" max="400" min="0" [pin]="true"
+                  snaps="true" step="100" ticks="false" [value]="currentValue">
+                </ion-range>
+                <ul class="tick-marks">
+                  <li *ngFor="let number of [0, 100, 200, 300, 400]" [class.selected]="number === currentValue">
+                    {{number}}
+                  </li>
+                </ul>
+              </div>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
   </ion-toolbar>
 </ion-header>
 

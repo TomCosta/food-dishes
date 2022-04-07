@@ -11,8 +11,13 @@ ion-button.floatBtn {
     position: absolute;
 }
 
+ion-item {
+    --background: transparent !important;
+}
+
 ion-item.colSize {
     width: 320px;
+    background: transparent !important;
 }
 
 .containFood {
@@ -51,3 +56,49 @@ ion-item.colSize {
 .rangeSize {
     width: 320px;
 }
+
+ion-range {
+    padding-top: 2px;
+}
+
+// Range component 
+.range-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+    .tick-marks {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 10px;
+      list-style: none;
+      margin: -10px 0 0 0;
+      margin-left: -4px;
+  
+      li {
+        color: var(--ion-color-dark);
+        position: relative;
+  
+        &::before {
+          background-color: var(--ion-color-dark);
+          content: "";
+          display: block;
+          height: 1em;
+          left: 85%;
+          position: absolute;
+          width: 1px;
+          top: -20px;
+        }
+  
+        &.selected {
+          color: var(--ion-color-primary);
+  
+          &::before {
+            background-color: var(--ion-color-primary);
+          }
+        }
+      }
+    }
+}
+  
+  

@@ -27,6 +27,25 @@
               </div>
             </ion-card-content>
           </ion-card>
+          <ion-card *ngIf="!data" class="categoryCard">
+            <ion-card-header>
+              <ion-card-title class="ion-text-center">
+                Empty!
+              </ion-card-title>
+              <ion-card-subtitle class="ion-text-center">
+                <p>Please, select a dish on the list.</p>                
+                <ion-col size="12" class="ion-text-center">
+                  <p>Click on the home page icon.</p>
+                  <p><ion-icon name="home-outline" class="iconSize"></ion-icon></p>
+                </ion-col>
+              </ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+              <div class="imgSize">
+                <img src="https://telecoms.com/wp-content/blogs.dir/1/files/2017/07/plate-dish-770x285.jpg" alt="data.title"/>
+              </div>
+            </ion-card-content>
+          </ion-card>
         </ion-col>
       </ion-row>
     </ion-grid>

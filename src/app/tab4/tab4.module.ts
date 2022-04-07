@@ -1,4 +1,3 @@
-import { ExploreContainerComponentModule } from '../explore-container/explore-container.module';
 import { Tab4PageRoutingModule } from './tab4-routing.module';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
@@ -12,7 +11,6 @@ import { Tab4Page } from './tab4.page';
     IonicModule,
     CommonModule,
     FormsModule,
-    ExploreContainerComponentModule,
     RouterModule.forChild([{ path: '', component: Tab4Page }]),
     Tab4PageRoutingModule,
   ],

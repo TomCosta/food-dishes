@@ -9,8 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab1Page implements OnInit {
 
-  categories: any;
   preference: string = 'no preferences';
+  categories: any;
+  currentValue = 100;
+  currentDualValues = {
+    lower: 0,
+    upper: 400
+  };
 
   constructor(
     private dataApi: DataService,
@@ -24,11 +29,23 @@ export class Tab1Page implements OnInit {
 
   getDishesCategory(){
     this.categories = this.dataApi.getDishess();
-    // console.log('Cats: ', this.categories);
+  }
+
+  rangeValues(event) {
+    console.log('rangeValues: ', event.detail.value);
+  }
+
+  // use this for single slider on ion-range
+  setValue($event: Event): void {
+    this.currentValue = parseInt(($event.target as HTMLInputElement).value, 10);
+  }
+  
+  // use this for dual sliders (dual knobs) on ion-range
+  setDualValues($event: Event): void {
+    this.currentDualValues = JSON.parse(JSON.stringify(($event.target as HTMLInputElement).value));
   }
 
   goToCategory(cat) {
-    // console.log('Click cat: ', cat.title);
     let navigationExtras: NavigationExtras = {
       state: {
         data: cat

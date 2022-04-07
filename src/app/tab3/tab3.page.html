@@ -20,8 +20,8 @@
     <ion-grid class="square">
       <ion-row>
         <ion-col size="12" class="colSize ion-text-center">
-          <ion-item class="colSize">
-            My Preference: &nbsp;<span class="prefs"> {{ preference }}</span>
+          <ion-item lines="none" class="colSize">
+            My preference: &nbsp;<span class="prefs"> {{ preference }}</span>
           </ion-item>
           <ion-radio-group allow-empty-selection="true" name="radio-group" [(ngModel)]="preference" (ionChange)="radioGroupChange($event)" #radioGroup>
             <ion-item *ngFor="let cat of categories" (ionSelect)="radioSelect($event)">
@@ -35,9 +35,13 @@
     <ion-grid class="square">
       <ion-row>
       <div class="itemMargin">
-        <ion-item class="colSize">
+        <ion-item lines="none" class="colSize">
           <ion-label>Allergy to substance: </ion-label>
-          <ion-input type="text" [(ngModel)]="allergy" placeholder="Type your allergy" (ionChange)="inputAllergy($event)"></ion-input>
+          <ion-input type="text" [(ngModel)]="allergy" name="allergy" placeholder="Type your allergy" (ionChange)="inputAllergy($event)"></ion-input>
+        </ion-item>
+        <ion-item lines="none" class="colSize">
+          <ion-label>Don't prefer to eat: </ion-label>
+          <ion-input type="text" [(ngModel)]="eatPref" name="eatPref" placeholder="Type your distaste" (ionChange)="inputeatPref($event)"></ion-input>
         </ion-item>
       </div>
     </ion-row>
