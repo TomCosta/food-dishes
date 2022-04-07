@@ -11,6 +11,10 @@ ion-button.floatBtn {
     position: absolute;
 }
 
+ion-item.colSize {
+    width: 320px;
+}
+
 .containFood {
     width: 100%;
     align-items: center;
@@ -28,8 +32,8 @@ ion-button.floatBtn {
 .categoryCard {
     width: 320px;
     height: 240px;
+    // z-index: -1000;
     border-radius: 12px;
-    z-index: -1000;
     border: 1px solid #834CE0;    
 }
 
@@ -42,4 +46,8 @@ ion-button.floatBtn {
 
 .prefs {
     color:#834CE0;
+}
+
+.rangeSize {
+    width: 320px;
 }

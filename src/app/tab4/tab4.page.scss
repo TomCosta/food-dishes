@@ -1,0 +1,27 @@
+.quadro {
+    margin: 1%;
+    display: flex;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.divLogo {
+  display: flex;  
+  align-items: baseline;
+  justify-content: center;
+  text-align: center;
+}
+
+.logo-login {
+  width: 320px;
+  height: auto;
+  text-align: center;
+  align-items: baseline;
+}

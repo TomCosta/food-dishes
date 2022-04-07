@@ -50,13 +50,13 @@ export class DataService {
       color: 'dark',
       id: 3,
       category: 'Kosher',
-      img: 'https://www.wellplated.com/wp-content/uploads/2015/10/Cheesy-Roasted-Spaghetti-Squash-with-Garlic-Mushrooms-and-Herbs.-Delicious-healthy-and-gluten-free-500x375.jpg'
+      img: 'http://boundbyfood.com/wp-content/uploads/2016/06/Pesto-Spaghetti-Squash-with-Mushrooms-and-Burrata1-FB.jpg'
     },
     {
       title: 'Fresh apple juice',
       subtitle: 'Fresh apple juice(120cal), Fresh orange juice(112cal), Lemonade(100cal), Ice tea lemon sweetened(89cal), Green tea(0cal), Caffe latte(130cal), Double double(212cal), Cafe Americano(15cal)',
       date: 'Yesterday',
-      color: 'medium',
+      color: 'danger',
       id: 4,
       category: 'Drinks',
       img: 'https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F9%2F2017%2F06%2Fapple-juice-as-hangover-cure-fwx.jpg'
@@ -65,7 +65,7 @@ export class DataService {
       title: 'Humus',
       subtitle: 'Humus(230cal), Falafel Wrap(450cal), Baba Ghannouj (413cal), Freshly Cauliflower-Shell Bolognese(804cal), Vegan Lasagna(804cal), Cheesy Spaghetti Squash with Pesto, Mushrooms, and Parmesan(804cal), Spaghetti with meat sauce(804cal)',
       date: 'Yesterday',
-      color: 'danger',
+      color: 'medium',
       id: 5,
       category: 'None',
       img: 'https://cdn.buttercms.com/AB7ud4YSE6nmOX0iGlgA'

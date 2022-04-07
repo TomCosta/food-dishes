@@ -1,0 +1,35 @@
+ion-card-content {
+    margin: 0;
+    padding: 0;    
+}
+
+.containFood {
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+}
+
+.square {
+    margin: 1%;
+    display: flex;
+    text-align: center;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.categoryCard {
+    width: 320px;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid #CCC;    
+}
+
+.imgSize {
+    width: 100%;
+    height: auto;
+    position: relative;
+    object-fit: contain;
+    img {
+        vertical-align: bottom;
+    }
+}

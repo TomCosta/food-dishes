@@ -53,12 +53,12 @@ export class LoginPage implements OnInit {
     };
     if (!userEat) {
       this.loadServ.dismissLoad();
-      this.toastServ.presentToast('User Invalid! 😡');
+      this.toastServ.presentToast('User Invalid!');
       return;
     }    
     if (!this.loginForm.value.userMail || !this.loginForm.value.password) {
       this.loadServ.dismissLoad();
-      this.toastServ.presentToast('Login Invalid! 😡');
+      this.toastServ.presentToast('Login Invalid!');
       return;
     } else {
       if(userEat.userMail===dataFormUser.userMail &&
@@ -69,7 +69,7 @@ export class LoginPage implements OnInit {
         this.route.navigate(['tabs', 'tab1']);
       } else {
         this.route.navigateByUrl('login');
-        this.toastServ.presentToast('Wrong email or password! 😡');
+        this.toastServ.presentToast('Wrong email or password!');
       }
       this.loadServ.dismissLoad();
     }

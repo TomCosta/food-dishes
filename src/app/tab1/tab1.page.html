@@ -1,12 +1,10 @@
 <ion-header [translucent]="true">
   <ion-toolbar mode="ios" color="light">
-    <ion-title>
-      My Preference: <span class="prefs">{{ preference }}</span>
-    </ion-title>
+    <ion-title>Calories</ion-title>&nbsp;
+    <ion-col size="6" class="rangeSize">
+      <ion-range mode="md" dualKnobs="true" min="25" max="400" step="25" value="80" snaps="true" [pin]="true"></ion-range>    
+    </ion-col>
   </ion-toolbar>
-  <ion-item>
-    <ion-range dualKnobs="true" min="25" max="400" step="25" value="80" snaps="true" [pinFormatter]="customFormatter" [pin]="true"></ion-range>
-  </ion-item>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -14,10 +12,10 @@
   <div class="containFood">
     <ion-grid class="square">
       <ion-row>
-        <ion-col size="12" class="ion-text-center">
-          <ion-card *ngFor="let cat of categories; let i = index;" class="categoryCard" (click)="goToCategory()">
+        <ion-col size="12" class="colSize ion-text-center">
+          <ion-card *ngFor="let cat of categories; let i = index;" class="categoryCard">
             <h3>{{ cat.title }}</h3>
-            <ion-button [color]="cat.color" size="small" shape="rounded" class="floatBtn">{{ cat.category }}</ion-button>
+            <ion-button [color]="cat.color" size="small" shape="round" class="floatBtn" (click)="goToCategory(cat)">{{ cat.category }}</ion-button>
             <div class="imgSize">
               <img [src]="cat.img" alt="cat.subtitle"/>
             </div>

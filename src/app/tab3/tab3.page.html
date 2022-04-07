@@ -7,7 +7,7 @@
       <ion-button>
         <ion-button slot="end" fill="clear" (click)="logout()">
           <ion-label>Logout</ion-label> &nbsp;
-          <ion-icon name="log-out"></ion-icon>
+          <ion-icon name="log-out-outline"></ion-icon>
         </ion-button>
       </ion-button>
     </ion-buttons>
@@ -15,11 +15,33 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container> -->
+  <div class="containFood">
+    <ion-grid class="square">
+      <ion-row>
+        <ion-col size="12" class="colSize ion-text-center">
+          <ion-item class="colSize">
+            My Preference: &nbsp;<span class="prefs"> {{ preference }}</span>
+          </ion-item>
+          <ion-radio-group allow-empty-selection="true" name="radio-group" [(ngModel)]="preference" (ionChange)="radioGroupChange($event)" #radioGroup>
+            <ion-item *ngFor="let cat of categories" (ionSelect)="radioSelect($event)">
+              <ion-label>{{cat.name}}</ion-label>
+              <ion-radio slot="start" name="{{cat.name}}" value="{{cat.value}}"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid class="square">
+      <ion-row>
+      <div class="itemMargin">
+        <ion-item class="colSize">
+          <ion-label>Allergy to substance: </ion-label>
+          <ion-input type="text" [(ngModel)]="allergy" placeholder="Type your allergy" (ionChange)="inputAllergy($event)"></ion-input>
+        </ion-item>
+      </div>
+    </ion-row>
+    </ion-grid>
+  </div>
+
 </ion-content>

@@ -1,4 +1,5 @@
 import { DataService } from '../services/data/data.service';
+import { NavigationExtras, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -13,6 +14,7 @@ export class Tab1Page implements OnInit {
 
   constructor(
     private dataApi: DataService,
+    private router: Router
   ){
   }
 
@@ -22,10 +24,16 @@ export class Tab1Page implements OnInit {
 
   getDishesCategory(){
     this.categories = this.dataApi.getDishess();
-    console.log('Cats: ', this.categories);
+    // console.log('Cats: ', this.categories);
   }
 
-  goToCategory() {
-
+  goToCategory(cat) {
+    // console.log('Click cat: ', cat.title);
+    let navigationExtras: NavigationExtras = {
+      state: {
+        data: cat
+      }
+    };
+    this.router.navigate(['/tabs/tab2'], navigationExtras);
   }
 }
