@@ -35,8 +35,8 @@ export class DataService {
       img: 'https://da28rauy2a860.cloudfront.net/wellbeing/wp-content/uploads/2020/12/03172949/Felafel-Wrap.png'
     },
     {
-      title: 'Sppageti and meat sauce',
-      subtitle: 'Humus(230cal), Falafel Wrap(450cal), Baba Ghannouj (413cal), Sppageti with meat sauce( 804cal)',
+      title: 'Spaghetti and meat sauce',
+      subtitle: 'Humus(230cal), Falafel Wrap(450cal), Baba Ghannouj (413cal), Spaghetti with meat sauce( 804cal)',
       date: '4:55 AM',
       color: 'tertiary',
       id: 2,
